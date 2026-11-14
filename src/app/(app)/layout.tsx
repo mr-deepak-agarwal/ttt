@@ -27,7 +27,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-      <aside className="hidden border-r border-surface-line bg-white lg:flex lg:flex-col">
+      <aside className="hidden border-r border-surface-line bg-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col">
         <div className="flex items-center gap-2 px-6 py-5">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand text-white"><Music2 className="h-5 w-5" /></span>
           <div className="leading-tight">
@@ -35,7 +35,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             <div className="text-xs text-ink-mute">Music · Art · Dance</div>
           </div>
         </div>
-        <div className="flex-1 px-3"><NavLinks items={items} /></div>
+        <div className="flex-1 overflow-y-auto px-3"><NavLinks items={items} /></div>
         <div className="border-t border-surface-line p-4">
           <div className="mb-3 flex items-center gap-3">
             <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-soft text-sm font-semibold text-brand">
